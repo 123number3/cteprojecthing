@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= title %> • VideoGameCentral</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <style>:root{ --student-hue: <%= site.themeHue %>; }</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="/" style="color: white; text-decoration: none;">VideoGameCentral</a>
+    </div>
+
+   
+    <div class="nav-toggle" id="mobile-menu">
+      ☰
+    </div>
+
+    <ul class="nav-menu">
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/about" class="nav-link">About</a></li>
+      <li><a href="/services" class="nav-link">Services</a></li>
+      <li><a href="/blog" class="nav-link">Blog</a></li>
+      <li><a href="/contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.nav-menu');
+
+  mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+</body>
+</html>
