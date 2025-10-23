@@ -16,6 +16,8 @@
 .navbar {
   background-color: #333;
   padding: 10px 0;
+  position: relative; 
+  z-index: 1000;
 }
 
 .nav-container {
@@ -79,7 +81,21 @@
     display: block;
   }
 }
+.page-content {
+  margin-top: 80px; 
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 0.7s ease-out forwards;
+  position: relative;
+  z-index: 1;
+}
 
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 body {
     margin: 0;
     font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -87,6 +103,7 @@ body {
     background: var(--bg);
     background-color: #20b2aa;
 }
+
 
 .container {
     max-width: 1000px;
@@ -125,7 +142,15 @@ nav a:hover {
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, .06);
-    margin: 1rem 0;
+    margin: 1rem 0;  
+}
+.carded{
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .06);
+    margin: 1rem auto;    
+    max-width: 400px
 }
 
 .btn {
