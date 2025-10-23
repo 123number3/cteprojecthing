@@ -20,6 +20,7 @@ app.get("/", (req, res) => res.render("pages/home", { title: "Home" }));
 app.get("/about", (req, res) => res.render("pages/about", { title: "About" }));
 app.get("/services", (req, res) => res.render("pages/services", { title: "Services" }));
 app.get("/blog", (req, res) => res.render("pages/blog", { title: "Blog" }));
+app.get("/contact", (req, res) => res.render("pages/contact", { title: "Contact" }));
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
